@@ -185,30 +185,6 @@ class LlamaHelper:
     
     def get_logits(self, prompts):
         #inputs = self.tokenizer(prompt, return_tensors="pt", padding=True, truncation=True, max_length=512, padding_side='left')
-        """
-        print('hello')
-        # Tokenize the list of prompts without padding
-        inputs = self.tokenizer(prompt, return_tensors="pt", padding=False, truncation=True, max_length=512)
-        print(inputs['input_ids'].shape)
-        # Determine the max length in this batch for manual padding
-        max_length = max(len(ids) for ids in inputs['input_ids'])
-        
-        print(max_length)
-        # Manually pad the inputs on the left
-        padded_input_ids = torch.full((len(inputs['input_ids']), max_length), self.tokenizer.pad_token_id, dtype=torch.long)
-        padded_attention_mask = torch.zeros((len(inputs['attention_mask']), max_length), dtype=torch.long)
-        
-        for i, (input_ids, attention_mask) in enumerate(zip(inputs['input_ids'], inputs['attention_mask'])):
-            diff_len = max_length - len(input_ids)
-            padded_input_ids[i, diff_len:] = input_ids
-            padded_attention_mask[i, diff_len:] = attention_mask
-        
-        # Prepare the manually padded inputs for model input
-        padded_inputs = {'input_ids': padded_input_ids, 'attention_mask': padded_attention_mask}
-
-        print(padded_inputs['input_ids'].shape)
-        print(padded_inputs['attention_mask'].shape)
-        """
         # Initialize a list to hold the padded input_ids and attention_mask tensors
         padded_input_ids_list = []
         padded_attention_mask_list = []
