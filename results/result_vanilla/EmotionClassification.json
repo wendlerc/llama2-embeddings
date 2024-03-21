@@ -1,0 +1,21 @@
+{
+  "dataset_revision": "4f58c6b202a23cf9a4da393831edf4f9183cad37",
+  "mteb_dataset_name": "EmotionClassification",
+  "mteb_version": "1.2.0",
+  "test": {
+    "accuracy": 0.2692,
+    "accuracy_stderr": 0.019927619024860944,
+    "evaluation_time": 4415.34,
+    "f1": 0.2358981752404002,
+    "f1_stderr": 0.011273625869745571,
+    "main_score": 0.2692
+  },
+  "validation": {
+    "accuracy": 0.27205,
+    "accuracy_stderr": 0.022654414580827283,
+    "evaluation_time": 4430.34,
+    "f1": 0.24361670554964268,
+    "f1_stderr": 0.016505119951211462,
+    "main_score": 0.27205
+  }
+}
