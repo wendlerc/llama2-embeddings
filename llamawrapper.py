@@ -179,6 +179,8 @@ class LlamaHelper:
             padded_input_ids = torch.cat([torch.full((padding_length,), self.tokenizer.pad_token_id, dtype=torch.long), input_ids])
             padded_attention_mask = torch.cat([torch.zeros((padding_length,), dtype=torch.long), attention_mask])
             
+            #print(attention_mask)
+            #print(padded_attention_mask)
             # Append the padded tensors to the lists
             padded_input_ids_list.append(padded_input_ids)
             padded_attention_mask_list.append(padded_attention_mask)
